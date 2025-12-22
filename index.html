@@ -3,65 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelMate - Viaje Melhor</title>
+    <title>TravelMate - Sua aventura começa aqui</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
-    <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-        <div class="font-bold text-2xl text-rose-500 tracking-tighter">TravelMate</div>
-        <a href="SEU_LINK_DO_APP_AQUI" class="px-5 py-2 bg-white text-rose-600 font-semibold rounded-full border border-rose-100 hover:bg-rose-50 transition shadow-sm text-sm">
-            Entrar no App
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-30">
+        <div class="flex items-center gap-2">
+             <div class="w-8 h-8 bg-gradient-to-tr from-rose-500 to-orange-400 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                TM
+            </div>
+            <span class="font-bold text-2xl text-slate-800 tracking-tight">TravelMate</span>
+        </div>
+        <a href="SEU_LINK_DO_APP_AQUI" class="hidden md:inline-block px-6 py-2.5 bg-slate-900 hover:bg-slate-700 text-white font-semibold rounded-full transition shadow-md text-sm">
+            Acessar App
         </a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-12">
+    <main class="max-w-7xl mx-auto px-6 mt-8 md:mt-16 flex flex-col md:flex-row items-center gap-12 md:gap-0 mb-24">
         
-        <div class="md:w-1/2 text-center md:text-left space-y-6">
-            <span class="inline-block py-1 px-3 rounded-full bg-rose-100 text-rose-600 text-xs font-bold tracking-wide uppercase">
-                Versão Beta Disponível
+        <div class="md:w-1/2 text-center md:text-left space-y-8 relative z-30 pt-10 md:pt-0">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-rose-100 text-rose-600 text-sm font-bold tracking-wide uppercase mb-4">
+                <span class="w-2 h-2 bg-rose-500 rounded-full mr-2 animate-pulse"></span>
+                Novidade: Planejamento em Grupo
             </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-slate-900">
-                Sua próxima viagem, <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-400">planejada do jeito certo.</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-slate-900 tracking-tight">
+                Sua próxima viagem, <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-pink-500 to-orange-400">planejada sem caos.</span>
             </h1>
-            <p class="text-lg text-slate-600 md:w-3/4">
-                Encontre as melhores rotas, compare hotéis e descubra experiências incríveis. Tudo integrado, sem abas infinitas.
+            <p class="text-xl text-slate-600 md:w-4/5 leading-relaxed">
+                Roteiros inteligentes, comparação de preços e descoberta de destinos incríveis como Campos do Jordão. Tudo no mesmo lugar.
             </p>
+            
             <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                <a href="SEU_LINK_DO_APP_AQUI" class="px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl shadow-lg shadow-rose-200 transition transform hover:-translate-y-1">
+                <a href="SEU_LINK_DO_APP_AQUI" class="flex items-center justify-center gap-2 px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-2xl shadow-lg shadow-rose-200/50 transition transform hover:-translate-y-1">
                     Começar Agora Grátis
-                </a>
-                <a href="#como-funciona" class="px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 font-bold rounded-xl border border-slate-200 transition">
-                    Como funciona?
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.5a.75.75 0 010 1.08l-5.5 5.5a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+                      </svg>
                 </a>
             </div>
             
-            <div class="pt-8 opacity-60 grayscale hover:grayscale-0 transition duration-500">
-                <p class="text-xs text-slate-400 mb-2 uppercase tracking-widest font-semibold">Parceiros Oficiais</p>
-                <div class="flex justify-center md:justify-start gap-6 items-center">
-                    <span class="font-bold text-xl">Booking.com</span>
-                    <span class="font-bold text-xl">Decolar</span>
-                    <span class="font-bold text-xl">Civitatis</span>
+            <div class="pt-10 md:pt-16">
+                <p class="text-sm text-slate-500 mb-4 uppercase tracking-widest font-bold">Integrações Oficiais com</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center opacity-50 grayscale transition duration-300 hover:grayscale-0 hover:opacity-100">
+                    <h3 class="text-2xl font-bold text-[#003580]">Booking.com</h3>
+                    <h3 class="text-2xl font-bold text-[#DF0000]">Decolar</h3>
+                    <h3 class="text-2xl font-bold text-[#F74900]">GetYourGuide</h3>
                 </div>
             </div>
         </div>
 
-        <div class="md:w-1/2 relative flex justify-center">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gradient-to-tr from-rose-400 to-orange-300 rounded-full blur-3xl opacity-20"></div>
+        <div class="md:w-1/2 relative h-[550px] md:h-[700px] w-full flex justify-center md:justify-end items-start mt-10 md:mt-0 z-10">
             
-            <div class="relative w-[280px] h-[580px] bg-slate-900 rounded-[3rem] border-8 border-slate-900 shadow-2xl overflow-hidden z-10">
-                <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2069&auto=format&fit=crop" 
-                     alt="App Screenshot" 
-                     class="w-full h-full object-cover opacity-90">
-                
-                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-slate-900 rounded-b-xl"></div>
+            <div class="absolute top-1/2 left-1/2 md:left-auto md:right-20 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-tr from-rose-300/40 to-orange-300/40 rounded-full blur-3xl -z-10"></div>
+
+            <div class="absolute left-1/2 md:left-auto md:right-[140px] top-20 md:top-32 transform -translate-x-[60%] md:translate-x-0 -rotate-6 w-[240px] h-[500px] bg-slate-900 rounded-[2.5rem] border-[6px] border-slate-900 shadow-xl overflow-hidden z-10 opacity-90 transition hover:z-30 hover:opacity-100 hover:rotate-0 hover:scale-105 duration-500">
+                <img src="./init.png" alt="TravelMate Splash Screen" class="w-full h-full object-cover">
             </div>
+
+            <div class="absolute left-1/2 md:left-auto md:right-10 top-0 transform -translate-x-[40%] md:translate-x-0 w-[270px] h-[570px] bg-slate-900 rounded-[3rem] border-8 border-slate-900 shadow-2xl shadow-rose-900/20 overflow-hidden z-20 transition hover:scale-105 duration-500">
+                <img src="./home.png" alt="TravelMate App Campos do Jordão" class="w-full h-full object-cover">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-7 bg-slate-900 rounded-b-2xl"></div>
+            </div>
+
         </div>
     </main>
 
-    <footer class="mt-24 border-t border-slate-200 py-8 text-center text-slate-400 text-sm">
-        <div class="max-w-7xl
+    <footer class="border-t border-slate-100 py-8 text-center text-slate-400 text-sm bg-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2 text-slate-600 font-semibold">
+                <div class="w-5 h-5 bg-gradient-to-tr from-rose-500 to-orange-400 rounded flex items-center justify-center text-white text-xs">TM</div>
+                <span>© 2024 TravelMate</span>
+            </div>
+            <div class="space-x-6 font-medium">
+                <a href="#" class="hover:text-rose-600 transition">Termos</a>
+                <a href="#" class="hover:text-rose-600 transition">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
