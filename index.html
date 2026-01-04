@@ -9,236 +9,222 @@
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         
-        /* Gradiente de texto padrão da marca */
-        .gradient-text {
-            background: linear-gradient(to right, #f43f5e, #fb923c);
+        /* Gradiente de texto */
+        .text-gradient {
+            background: linear-gradient(to right, #fb7185, #fb923c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Utilitário para "caixas" com efeito de vidro sutil */
-        .glass-box {
-            backdrop-filter: blur(12px);
-            background-color: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+        /* Animação de entrada */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
         }
-        
-        /* Bolhas de fundo para cor ambiente */
-        .blob-bg {
-            position: absolute;
-            filter: blur(90px);
-            z-index: -10;
-            opacity: 0.4;
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Detalhes do FAQ (suavização) */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden relative">
+<body class="bg-slate-900 text-white overflow-x-hidden selection:bg-rose-500 selection:text-white">
 
-    <div class="blob-bg bg-rose-400 w-96 h-96 top-0 left-[-20%] rounded-full mix-blend-multiply animate-pulse"></div>
-    <div class="blob-bg bg-orange-300 w-96 h-96 top-40 right-[-20%] rounded-full mix-blend-multiply animation-delay-2000 animate-pulse"></div>
-
-
-    <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-30">
-        <div class="flex items-center gap-2">
-            <img src="./logo.svg" alt="VoyMatch Logo" class="w-10 h-10 rounded-full bg-white/80 backdrop-blur p-1 shadow-sm object-contain">
-            <span class="font-bold text-2xl text-slate-800 tracking-tight">VoyMatch</span>
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-50">
+        <div class="flex items-center gap-3">
+            <img src="./logo.svg" alt="VoyMatch Logo" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md p-1 border border-white/20 shadow-lg shadow-rose-500/10">
+            <span class="font-bold text-2xl tracking-tight">VoyMatch</span>
         </div>
-        <a href="https://voymatch.web.app" class="hidden md:inline-block px-6 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-full transition shadow-md text-sm hover:scale-105 transform">
+        <a href="https://voymatch.web.app" class="hidden md:inline-block px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md text-white font-semibold rounded-full transition shadow-lg hover:shadow-rose-500/20 text-sm hover:scale-105 transform">
             Acessar App
         </a>
     </nav>
 
-    <header class="max-w-7xl mx-auto px-6 mt-8 md:mt-16 flex flex-col md:flex-row items-center gap-12 md:gap-0 mb-24 relative">
+    <header class="relative pt-10 pb-20 md:pt-20 md:pb-32 overflow-hidden">
         
-        <div class="md:w-1/2 text-center md:text-left space-y-8 relative z-30 pt-10 md:pt-0">
-            <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-100 to-orange-100 text-rose-700 text-sm font-bold tracking-wide uppercase mb-4 border border-rose-200/50 shadow-sm">
-                <span class="w-2 h-2 bg-rose-500 rounded-full mr-2 animate-pulse"></span>
-                Novo: Planejador de Viagens
-            </span>
-            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-slate-900 tracking-tight drop-shadow-sm">
-                Viajar em grupo <br>
-                <span class="gradient-text">sem brigas.</span>
-            </h1>
-            <p class="text-xl text-slate-700 md:w-4/5 leading-relaxed font-medium">
-                Pare de discutir no WhatsApp. Dê match nos destinos que todos gostam e descubra a viagem perfeita em segundos.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                <a href="https://voymatch.web.app" class="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-bold rounded-2xl shadow-xl shadow-rose-500/20 transition transform hover:-translate-y-1">
-                    Começar Agora Grátis
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-rose-600 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-600 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animation-delay-2000 animate-pulse"></div>
 
-        <div class="md:w-1/2 relative h-[500px] w-full flex justify-center items-center mt-10 md:mt-0 z-10">
-            <div class="absolute w-[450px] h-[450px] bg-gradient-to-tr from-rose-400/30 via-purple-400/20 to-orange-300/30 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
             
-            <div class="relative w-[280px] h-[580px] bg-slate-900 rounded-[3rem] border-[10px] border-slate-900 shadow-2xl shadow-rose-900/30 overflow-hidden z-20 transition hover:scale-105 duration-500 rotate-3 hover:rotate-0">
-                <img src="./home.jpeg" alt="VoyMatch App Principal" class="w-full h-full object-cover">
-                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-black rounded-b-3xl z-30"></div>
+            <div class="md:w-1/2 text-center md:text-left space-y-8 fade-in-up">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-bold uppercase tracking-widest mb-2 shadow-[0_0_15px_rgba(244,63,94,0.3)]">
+                    🚀 Nova era das viagens
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight">
+                    Viajar junto <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-orange-400 to-yellow-400 drop-shadow-sm">é melhor.</span>
+                </h1>
+                
+                <p class="text-xl text-slate-300 md:w-4/5 leading-relaxed font-light">
+                    Sem brigas no grupo do WhatsApp. Dê match nos destinos, vote com seus amigos e descubra a viagem perfeita.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                    <a href="https://voymatch.web.app" class="px-8 py-4 bg-gradient-to-r from-rose-600 to-orange-600 hover:from-rose-500 hover:to-orange-500 text-white font-bold rounded-2xl shadow-lg shadow-rose-900/50 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Começar Agora
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 flex justify-center relative fade-in-up" style="animation-delay: 0.2s;">
+                <div class="relative w-[280px] h-[580px] bg-black rounded-[3rem] border-[8px] border-slate-800 shadow-2xl shadow-rose-500/20 rotate-3 hover:rotate-0 transition duration-500 z-10">
+                    <img src="./home.jpeg" alt="App VoyMatch" class="w-full h-full object-cover rounded-[2.5rem] opacity-90">
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-white/10 rounded-full animate-[spin_10s_linear_infinite]"></div>
             </div>
         </div>
     </header>
 
-
-    <section class="py-24 relative z-20">
-        <div class="max-w-7xl mx-auto px-6 relative">
+    <section class="py-24 bg-gradient-to-br from-rose-900 via-slate-900 to-slate-900 relative overflow-hidden border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Como funciona?</h2>
-                <p class="text-slate-600 text-lg font-medium">Do tédio ao embarque em 3 passos simples.</p>
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Como Funciona?</h2>
+                <p class="text-slate-400 text-lg font-medium">Do tédio ao embarque em 3 passos.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 text-center relative z-10">
-                <div class="group space-y-4 p-8 rounded-[2rem] bg-rose-50 border-2 border-rose-100 hover:border-rose-300 hover:bg-rose-100 hover:shadow-xl hover:shadow-rose-100/50 transition duration-300 transform hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto text-rose-500 text-3xl font-black shadow-sm group-hover:scale-110 transition">1</div>
-                    <h3 class="text-2xl font-bold text-slate-800">Crie seu Grupo</h3>
-                    <p class="text-slate-600 leading-relaxed">Convide amigos, família ou seu amor usando apenas o e-mail. Todos entram na mesma "sala".</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-800/50 backdrop-blur-lg border border-white/10 p-8 rounded-3xl text-center hover:bg-slate-800 transition transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-slate-700/50 text-rose-400 rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg group-hover:scale-110 transition border border-white/5">1</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Crie o Grupo</h3>
+                    <p class="text-slate-400 leading-relaxed">Convide a galera pelo e-mail. Todo mundo entra na mesma sala virtual.</p>
                 </div>
-                <div class="group space-y-4 p-8 rounded-[2rem] bg-purple-50 border-2 border-purple-100 hover:border-purple-300 hover:bg-purple-100 hover:shadow-xl hover:shadow-purple-100/50 transition duration-300 transform hover:-translate-y-2 md:-mt-8">
-                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto text-purple-500 text-3xl font-black shadow-sm group-hover:scale-110 transition">2</div>
-                    <h3 class="text-2xl font-bold text-slate-800">Vote nos Destinos</h3>
-                    <p class="text-slate-600 leading-relaxed">Deslize ou clique: Coração se amou, X se não gostou. Voto secreto até dar match!</p>
+                <div class="bg-slate-800/50 backdrop-blur-lg border border-white/10 p-8 rounded-3xl text-center hover:bg-slate-800 transition transform hover:-translate-y-2 group mt-0 md:-mt-6 shadow-2xl shadow-rose-900/20">
+                    <div class="w-16 h-16 bg-gradient-to-br from-rose-500 to-orange-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg group-hover:scale-110 transition">2</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Swipe & Vote</h3>
+                    <p class="text-slate-400 leading-relaxed">Coração se amou, X se não gostou. O voto é secreto até dar match.</p>
                 </div>
-                <div class="group space-y-4 p-8 rounded-[2rem] bg-orange-50 border-2 border-orange-100 hover:border-orange-300 hover:bg-orange-100 hover:shadow-xl hover:shadow-orange-100/50 transition duration-300 transform hover:-translate-y-2">
-                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto text-orange-500 text-3xl font-black shadow-sm group-hover:scale-110 transition">3</div>
-                    <h3 class="text-2xl font-bold text-slate-800">It's a Match!</h3>
-                    <p class="text-slate-600 leading-relaxed">Quando todos do grupo gostam do mesmo lugar, o VoyMatch avisa. Hora de fazer as malas!</p>
+                <div class="bg-slate-800/50 backdrop-blur-lg border border-white/10 p-8 rounded-3xl text-center hover:bg-slate-800 transition transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-slate-700/50 text-orange-400 rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg group-hover:scale-110 transition border border-white/5">3</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">It's a Match!</h3>
+                    <p class="text-slate-400 leading-relaxed">O VoyMatch avisa na hora quando todos gostam do mesmo lugar.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section class="py-24 bg-white relative overflow-hidden">
-        <div class="blob-bg bg-cyan-200 w-full h-96 bottom-0 right-0 opacity-20 rounded-full mix-blend-multiply"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section class="py-24 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
                 
-                <div class="space-y-8 p-6 md:p-0">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
-                        Democracia real <br> na sua viagem.
+                <div class="md:w-1/2 space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+                        Democracia <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-400">na sua viagem.</span>
                     </h2>
-                    <p class="text-lg text-slate-600 leading-relaxed">
+                    <p class="text-lg text-slate-400 leading-relaxed">
                         Chega de uma pessoa decidir tudo sozinha. O VoyMatch garante que o destino escolhido agrada a todos, de forma justa e divertida.
                     </p>
                     
-                    <ul class="space-y-5 mt-4">
-                        <li class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition">
-                            <div class="bg-rose-100 p-2 rounded-lg"><svg class="w-6 h-6 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
-                            <span class="font-bold text-slate-700 text-lg">Login simples e rápido</span>
-                        </li>
-                        <li class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition">
-                             <div class="bg-purple-100 p-2 rounded-lg"><svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div>
-                            <span class="font-bold text-slate-700 text-lg">Funciona no Celular e PC</span>
-                        </li>
-                        <li class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition">
-                             <div class="bg-orange-100 p-2 rounded-lg"><svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
-                            <span class="font-bold text-slate-700 text-lg">Sincronização em tempo real</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-rose-200 to-orange-200 rounded-[3rem] rotate-6 scale-105 group-hover:rotate-3 transition duration-500 blur-sm opacity-70"></div>
-                    
-                    <div class="relative bg-white/80 backdrop-blur-xl p-6 rounded-[2.5rem] shadow-2xl border-2 border-white/50 rotate-3 group-hover:rotate-0 transition duration-500 overflow-hidden">
-                        <img src="./init.jpeg" alt="Dashboard" class="rounded-2xl w-full object-cover h-[500px] shadow-inner">
-                        
-                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 flex items-center gap-4 animate-bounce animation-delay-2000 hover:animate-none">
-                            <div class="bg-gradient-to-r from-green-400 to-emerald-500 p-3 rounded-full shadow-lg shadow-green-200">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <div class="grid gap-4 pt-4">
+                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 rounded-2xl border border-white/5 hover:border-rose-500/30 transition">
+                            <div class="bg-rose-500/10 p-2 rounded-lg text-rose-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </div>
-                            <div>
-                                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Status do Grupo</p>
-                                <p class="font-black text-xl text-slate-800 gradient-text">Match Encontrado!</p>
+                            <span class="font-bold text-slate-200">Login simples e rápido</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 rounded-2xl border border-white/5 hover:border-orange-500/30 transition">
+                            <div class="bg-orange-500/10 p-2 rounded-lg text-orange-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                             </div>
+                            <span class="font-bold text-slate-200">Funciona no Celular e PC</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 rounded-2xl border border-white/5 hover:border-purple-500/30 transition">
+                            <div class="bg-purple-500/10 p-2 rounded-lg text-purple-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <span class="font-bold text-slate-200">Sincronização em tempo real</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="md:w-1/2 relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-500 to-orange-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                    <img src="./init.jpeg" alt="App Screen" class="relative rounded-3xl shadow-2xl border-4 border-slate-800 rotate-2 group-hover:rotate-0 transition duration-500 w-full max-w-sm mx-auto object-cover">
+                </div>
             </div>
         </div>
     </section>
 
-
-    <section class="py-24 relative z-10">
-        <div class="max-w-4xl mx-auto m-6 p-8 md:p-16 bg-indigo-50/80 backdrop-blur-lg rounded-[3rem] border-4 border-indigo-100 shadow-xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-200/30 rounded-full blur-3xl -z-10"></div>
-
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-slate-900 mb-12">Perguntas Frequentes</h2>
+    <section class="py-24 bg-slate-900 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-black text-center text-white mb-12">Perguntas Frequentes</h2>
             
-            <div class="space-y-6">
-                <details class="group bg-white p-6 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-200 cursor-pointer transition-all">
-                    <summary class="flex justify-between items-center font-bold text-xl text-slate-800 list-none">
-                        É gratuito de verdade?
-                        <span class="transition transform group-open:rotate-180 bg-indigo-100 text-indigo-600 rounded-full p-1">
-                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            <div class="space-y-4">
+                <details class="group bg-slate-800/50 p-6 rounded-2xl border border-white/5 cursor-pointer open:bg-slate-800 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                        É gratuito?
+                        <span class="transition transform group-open:rotate-180 text-rose-500">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                         </span>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed text-lg pl-2 border-l-4 border-indigo-200">Sim! O VoyMatch é totalmente gratuito para criar grupos e votar. Não há cobranças escondidas.</p>
+                    <p class="text-slate-400 mt-4 leading-relaxed">Sim! O VoyMatch é totalmente gratuito para criar grupos, votar e dar match. Sem pegadinhas.</p>
                 </details>
 
-                <details class="group bg-white p-6 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-200 cursor-pointer transition-all">
-                    <summary class="flex justify-between items-center font-bold text-xl text-slate-800 list-none">
-                        Preciso instalar algo?
-                        <span class="transition transform group-open:rotate-180 bg-indigo-100 text-indigo-600 rounded-full p-1">
-                             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                <details class="group bg-slate-800/50 p-6 rounded-2xl border border-white/5 cursor-pointer open:bg-slate-800 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                        Preciso instalar?
+                        <span class="transition transform group-open:rotate-180 text-rose-500">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                         </span>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed text-lg pl-2 border-l-4 border-indigo-200">Não obrigatoriamente. Você pode usar direto no navegador do celular ou PC. Mas o app oferece a opção de "Adicionar à Tela Inicial" para ficar igual um aplicativo nativo.</p>
+                    <p class="text-slate-400 mt-4 leading-relaxed">Não obrigatoriamente. Funciona direto no navegador. Mas recomendamos usar a opção "Adicionar à Tela Inicial" para uma experiência melhor.</p>
                 </details>
 
-                 <details class="group bg-white p-6 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-200 cursor-pointer transition-all">
-                    <summary class="flex justify-between items-center font-bold text-xl text-slate-800 list-none">
-                        Quantas pessoas cabem no grupo?
-                        <span class="transition transform group-open:rotate-180 bg-indigo-100 text-indigo-600 rounded-full p-1">
-                             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                <details class="group bg-slate-800/50 p-6 rounded-2xl border border-white/5 cursor-pointer open:bg-slate-800 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                        Quantas pessoas no grupo?
+                        <span class="transition transform group-open:rotate-180 text-rose-500">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                         </span>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed text-lg pl-2 border-l-4 border-indigo-200">Quantas você quiser! O VoyMatch funciona perfeitamente para casais (2 pessoas), famílias ou grandes grupos de amigos.</p>
+                    <p class="text-slate-400 mt-4 leading-relaxed">Quantas quiser! Funciona bem para casais (2 pessoas), famílias ou grupos gigantes de amigos.</p>
                 </details>
             </div>
         </div>
     </section>
 
-
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto bg-gradient-to-r from-purple-600 via-rose-500 to-orange-500 rounded-[3rem] p-12 md:p-24 text-center shadow-2xl shadow-rose-500/30 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-full bg-white/10 bg-grid-white/[0.1] mask-image:linear-gradient(to_bottom,white,transparent)"></div>
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto bg-gradient-to-r from-rose-600 to-orange-600 rounded-[3rem] p-12 md:p-24 text-center shadow-2xl shadow-rose-900/50 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
             
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight drop-shadow-md">
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-8 leading-tight drop-shadow-md">
                     Pronto para a <br> próxima viagem?
                 </h2>
-                <p class="text-white/90 text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+                <p class="text-white/90 text-xl mb-10 max-w-2xl mx-auto font-medium">
                     Junte seus amigos agora mesmo e descubra o destino dos sonhos em menos de 5 minutos.
                 </p>
-                <a href="https://voymatch.web.app" class="inline-block px-12 py-6 bg-white text-rose-600 font-black text-lg rounded-full shadow-[0_10px_40px_-10px_rgba(255,255,255,0.5)] transform hover:scale-110 hover:shadow-[0_20px_60px_-10px_rgba(255,255,255,0.7)] transition duration-300">
+                <a href="https://voymatch.web.app" class="inline-block px-12 py-5 bg-white text-rose-600 font-bold text-lg rounded-full shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300">
                     Acessar VoyMatch Agora
                 </a>
             </div>
         </div>
     </section>
 
-
-    <footer class="border-t border-slate-100 py-12 text-center text-slate-400 text-sm bg-slate-50">
+    <footer class="bg-slate-900 border-t border-slate-800 py-12 text-center text-slate-500">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-3 text-slate-600 font-bold text-lg">
-                <img src="./logo.svg" alt="VoyMatch Logo" class="w-8 h-8 rounded-full bg-white p-1 object-contain shadow-sm">
-                <span>© 2025 VoyMatch</span>
+            <div class="flex items-center gap-2 text-white font-bold text-xl">
+                <img src="./logo.svg" alt="Logo" class="w-8 h-8 rounded-full bg-white/10 p-1">
+                <span>VoyMatch</span>
             </div>
-            <div class="flex flex-wrap justify-center gap-8 font-semibold text-base">
-                <a href="#" class="hover:text-rose-500 transition hover:underline">Termos</a>
-                <a href="#" class="hover:text-rose-500 transition hover:underline">Privacidade</a>
-                <a href="https://github.com/raphaelcborges" target="_blank" class="hover:text-rose-500 transition flex items-center gap-2">
-                    GitHub 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="#" class="hover:text-rose-500 transition">Termos</a>
+                <a href="#" class="hover:text-rose-500 transition">Privacidade</a>
+                <a href="https://github.com/raphaelcborges" class="hover:text-rose-500 transition">GitHub</a>
             </div>
         </div>
+        <p class="mt-8 text-xs opacity-40">© 2025 VoyMatch. Feito com 💖 e código.</p>
     </footer>
 
 </body>
