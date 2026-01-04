@@ -8,70 +8,179 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(to right, #f43f5e, #fb923c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
     <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-30">
         <div class="flex items-center gap-2">
-            <img src="./logo_r.png" alt="VoyMatch Logo" class="w-10 h-10 rounded-full bg-white p-1 shadow-sm object-contain">
+            <img src="./logo.svg" alt="VoyMatch Logo" class="w-10 h-10 rounded-full bg-white p-1 shadow-sm object-contain">
             <span class="font-bold text-2xl text-slate-800 tracking-tight">VoyMatch</span>
         </div>
-        <a href="https://voymatch.web.app" class="hidden md:inline-block px-6 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-full transition shadow-md text-sm">
+        <a href="https://voymatch.web.app" class="hidden md:inline-block px-6 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-full transition shadow-md text-sm hover:scale-105 transform">
             Acessar App
         </a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 mt-8 md:mt-16 flex flex-col md:flex-row items-center gap-12 md:gap-0 mb-24">
-        
+    <header class="max-w-7xl mx-auto px-6 mt-8 md:mt-16 flex flex-col md:flex-row items-center gap-12 md:gap-0 mb-24">
         <div class="md:w-1/2 text-center md:text-left space-y-8 relative z-30 pt-10 md:pt-0">
-            <span class="inline-flex items-center px-3 py-1 rounded-full bg-rose-100 text-rose-600 text-sm font-bold tracking-wide uppercase mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-rose-100 text-rose-600 text-sm font-bold tracking-wide uppercase mb-4 border border-rose-200">
                 <span class="w-2 h-2 bg-rose-500 rounded-full mr-2 animate-pulse"></span>
-                Novo: Decida viagens em grupo
+                Novo: Planejador de Viagens
             </span>
             <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-slate-900 tracking-tight">
-                Viajar com amigos <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-pink-500 to-orange-400">sem brigas.</span>
+                Viajar em grupo <br>
+                <span class="gradient-text">sem brigas.</span>
             </h1>
             <p class="text-xl text-slate-600 md:w-4/5 leading-relaxed">
-                Dê match nos destinos que todos gostam. Crie seu grupo, convide a galera e descubra para onde vocês vão.
+                Pare de discutir no WhatsApp. Dê match nos destinos que todos gostam e descubra a viagem perfeita em segundos.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                <a href="https://voymatch.web.app" class="flex items-center justify-center gap-2 px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-2xl shadow-lg shadow-rose-200/50 transition transform hover:-translate-y-1">
+                <a href="https://voymatch.web.app" class="flex items-center justify-center gap-2 px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-2xl shadow-xl shadow-rose-200/50 transition transform hover:-translate-y-1">
                     Começar Agora Grátis
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                        <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.5a.75.75 0 010 1.08l-5.5 5.5a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
                 </a>
             </div>
-            
-            <div class="pt-10 md:pt-16">
-                <p class="text-sm text-slate-500 mb-4 uppercase tracking-widest font-bold">Destinos incríveis pelo Brasil</p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center opacity-60 grayscale transition duration-300 hover:grayscale-0 hover:opacity-100">
-                    <span class="text-xl font-bold text-gray-400 hover:text-blue-600 transition">Rio de Janeiro</span>
-                    <span class="text-xl font-bold text-gray-400 hover:text-green-600 transition">Gramado</span>
-                    <span class="text-xl font-bold text-gray-400 hover:text-orange-500 transition">Jericoacoara</span>
-                    <span class="text-xl font-bold text-gray-400 hover:text-yellow-500 transition">Bonito</span>
+        </div>
+
+        <div class="md:w-1/2 relative h-[500px] w-full flex justify-center items-center mt-10 md:mt-0 z-10">
+            <div class="absolute w-[400px] h-[400px] bg-gradient-to-tr from-rose-300/40 to-orange-300/40 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            <div class="relative w-[280px] h-[580px] bg-slate-900 rounded-[3rem] border-8 border-slate-900 shadow-2xl shadow-rose-900/20 overflow-hidden z-20 transition hover:scale-105 duration-500 rotate-3 hover:rotate-0">
+                <img src="./home.jpeg" alt="VoyMatch App Principal" class="w-full h-full object-cover">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-7 bg-slate-900 rounded-b-2xl"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Como funciona?</h2>
+                <p class="text-slate-500 text-lg">Do tédio ao embarque em 3 passos simples.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="space-y-4 p-6 rounded-3xl hover:bg-slate-50 transition duration-300">
+                    <div class="w-16 h-16 bg-rose-100 rounded-2xl flex items-center justify-center mx-auto text-rose-600 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-bold text-slate-800">Crie seu Grupo</h3>
+                    <p class="text-slate-600">Convide amigos, família ou seu amor usando apenas o e-mail. Todos entram na mesma "sala".</p>
+                </div>
+                <div class="space-y-4 p-6 rounded-3xl hover:bg-slate-50 transition duration-300">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto text-orange-600 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-bold text-slate-800">Vote nos Destinos</h3>
+                    <p class="text-slate-600">Deslize ou clique: Coração se amou, X se não gostou. Ninguém vê o voto do outro até dar match.</p>
+                </div>
+                <div class="space-y-4 p-6 rounded-3xl hover:bg-slate-50 transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto text-green-600 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-bold text-slate-800">It's a Match!</h3>
+                    <p class="text-slate-600">Quando todos do grupo gostam do mesmo lugar, o VoyMatch avisa. Agora é só fazer as malas!</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="md:w-1/2 relative h-[550px] md:h-[700px] w-full flex justify-center md:justify-end items-start mt-10 md:mt-0 z-10">
-            
-            <div class="absolute top-1/2 left-1/2 md:left-auto md:right-20 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-tr from-rose-300/40 to-orange-300/40 rounded-full blur-3xl -z-10"></div>
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Democracia real na sua viagem.</h2>
+                    <p class="text-lg text-slate-600">Chega de uma pessoa decidir tudo sozinha. O VoyMatch garante que o destino escolhido agrada a todos.</p>
+                    
+                    <ul class="space-y-4 mt-4">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-medium text-slate-700">Login simples e rápido</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-medium text-slate-700">Funciona no Celular e PC</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="font-medium text-slate-700">Sincronização em tempo real</span>
+                        </li>
+                    </ul>
 
-            <div class="absolute left-1/2 md:left-auto md:right-[140px] top-20 md:top-32 transform -translate-x-[60%] md:translate-x-0 -rotate-6 w-[240px] h-[500px] bg-slate-900 rounded-[2.5rem] border-[6px] border-slate-900 shadow-xl overflow-hidden z-10 opacity-90 transition hover:z-30 hover:opacity-100 hover:rotate-0 hover:scale-105 duration-500">
-                <img src="./init.jpeg" alt="VoyMatch Splash Screen" class="w-full h-full object-cover">
+                    <div class="pt-6">
+                        <a href="https://voymatch.web.app" class="text-rose-600 font-bold hover:text-rose-700 flex items-center gap-2">
+                            Experimentar Recursos
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 rotate-2 hover:rotate-0 transition duration-500">
+                        <img src="./init.jpeg" alt="Dashboard" class="rounded-xl w-full object-cover h-96">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4">
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-bold uppercase">Status</p>
+                                <p class="font-bold text-slate-800">Match Encontrado!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="absolute left-1/2 md:left-auto md:right-10 top-0 transform -translate-x-[40%] md:translate-x-0 w-[270px] h-[570px] bg-slate-900 rounded-[3rem] border-8 border-slate-900 shadow-2xl shadow-rose-900/20 overflow-hidden z-20 transition hover:scale-105 duration-500">
-                <img src="./home.jpeg" alt="VoyMatch App Principal" class="w-full h-full object-cover">
-                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-7 bg-slate-900 rounded-b-2xl"></div>
-            </div>
-
         </div>
-    </main>
+    </section>
+
+    <section class="bg-white py-24">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-center text-slate-900 mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 list-none">
+                        É gratuito?
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">Sim! O VoyMatch é totalmente gratuito para criar grupos e votar.</p>
+                </details>
+
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 list-none">
+                        Preciso instalar algo?
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">Não obrigatoriamente. Você pode usar direto no navegador, mas recomendamos "Adicionar à Tela Inicial" para uma experiência de aplicativo.</p>
+                </details>
+
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 list-none">
+                        Quantas pessoas cabem no grupo?
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed">Quantas você quiser! De casais (2 pessoas) a excursões inteiras.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-center px-6">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Pronto para a próxima viagem?</h2>
+        <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">Junte seus amigos agora mesmo e descubra o destino dos sonhos em menos de 5 minutos.</p>
+        <a href="https://voymatch.web.app" class="inline-block px-10 py-5 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-bold rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+            Acessar VoyMatch Agora
+        </a>
+    </section>
 
     <footer class="border-t border-slate-100 py-8 text-center text-slate-400 text-sm bg-white">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -80,8 +189,9 @@
                 <span>© 2025 VoyMatch</span>
             </div>
             <div class="space-x-6 font-medium">
-                <a href="#" class="hover:text-rose-600 transition">Termos de Uso</a>
+                <a href="#" class="hover:text-rose-600 transition">Termos</a>
                 <a href="#" class="hover:text-rose-600 transition">Privacidade</a>
+                <a href="https://github.com/raphaelcborges" target="_blank" class="hover:text-rose-600 transition">GitHub</a>
             </div>
         </div>
     </footer>
