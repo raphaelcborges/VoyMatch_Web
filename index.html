@@ -43,9 +43,14 @@
             <img src="./logo_r.png" alt="VoyMatch Logo" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md p-1 border border-white/20 shadow-lg shadow-rose-500/10">
             <span class="font-bold text-2xl tracking-tight">VoyMatch</span>
         </div>
-        <a href="https://voymatch.web.app" class="hidden md:inline-block px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md text-white font-semibold rounded-full transition shadow-lg hover:shadow-rose-500/20 text-sm hover:scale-105 transform">
-            Acessar App
-        </a>
+        <div class="hidden md:flex gap-4">
+            <a href="./voymatch.apk" download class="px-6 py-2.5 bg-transparent hover:bg-white/5 border border-white/20 text-slate-300 font-semibold rounded-full transition text-sm hover:text-white">
+                Baixar APK
+            </a>
+            <a href="https://voymatch.web.app" class="px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md text-white font-semibold rounded-full transition shadow-lg hover:shadow-rose-500/20 text-sm hover:scale-105 transform">
+                Acessar Web App
+            </a>
+        </div>
     </nav>
 
     <header class="relative pt-10 pb-20 md:pt-20 md:pb-32 overflow-hidden">
@@ -57,7 +62,7 @@
             
             <div class="md:w-1/2 text-center md:text-left space-y-8 fade-in-up">
                 <div class="inline-block px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-bold uppercase tracking-widest mb-2 shadow-[0_0_15px_rgba(244,63,94,0.3)]">
-                    🚀 Nova era das viagens
+                    NOVA ERA DAS VIAGENS
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight">
@@ -71,8 +76,13 @@
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                     <a href="https://voymatch.web.app" class="px-8 py-4 bg-gradient-to-r from-rose-600 to-orange-600 hover:from-rose-500 hover:to-orange-500 text-white font-bold rounded-2xl shadow-lg shadow-rose-900/50 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                        Começar Agora
+                        Usar no Navegador
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </a>
+                    
+                    <a href="./voymatch.apk" download class="px-8 py-4 bg-slate-800 border border-slate-700 hover:bg-slate-700 text-white font-bold rounded-2xl transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400" viewBox="0 0 24 24" fill="currentColor"><path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Baixar APK
                     </a>
                 </div>
             </div>
@@ -156,6 +166,34 @@
         </div>
     </section>
 
+    <section class="py-24 bg-slate-900 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-[3rem] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl">
+                <div class="md:w-2/3 text-center md:text-left">
+                    <div class="inline-block px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-bold uppercase tracking-widest mb-4">
+                        Disponível para Android
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Leve o VoyMatch com você</h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Instale o aplicativo oficial para ter a melhor experiência possível. Notificações de match em tempo real e maior performance.
+                    </p>
+                    <a href="./voymatch.apk" download class="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 hover:bg-slate-200 font-bold rounded-xl transition shadow-lg">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414C17.523 15.3414 17.5756 15.3414 17.5756 15.394C17.9436 16.6028 18.995 17.4965 20.2566 17.4965C21.9388 17.4965 23.3056 16.1298 23.3056 14.4475C23.3056 12.7653 21.9388 11.3985 20.2566 11.3985C20.1514 11.3985 20.0463 11.4511 19.9411 11.4511V11.3985C19.9411 7.92903 17.1025 5.09039 13.633 5.09039C11.9507 5.09039 10.4263 5.77382 9.32231 6.8778C8.58634 6.247 7.64009 5.87905 6.58872 5.87905C4.22301 5.87905 2.27795 7.77132 2.27795 10.137C2.27795 10.2947 2.27795 10.4524 2.33052 10.5576C0.963704 11.1358 0.0174561 12.5025 0.0174561 14.0796C0.0174561 16.2349 1.75225 17.9697 3.90757 17.9697C4.1704 17.9697 4.43324 17.9171 4.64352 17.8646C5.1692 19.8622 6.95668 21.3341 9.11199 21.3341C11.6881 21.3341 13.7907 19.2314 13.7907 16.6555V16.3401C14.2638 16.5504 14.7895 16.6555 15.3152 16.6555C16.1563 16.6555 16.9449 16.3926 17.5756 15.9195V15.3414H17.523Z"/></svg>
+                        Download APK (Android)
+                    </a>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="w-32 h-32 bg-slate-700/50 rounded-3xl flex items-center justify-center border border-white/10 shadow-inner">
+                        <svg class="w-16 h-16 text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16.606 4.981l1.76-3.047a.56.56 0 00-.206-.763.56.56 0 00-.763.206L15.611 4.47a9.294 9.294 0 00-7.22 0L6.605 1.377a.56.56 0 00-.763-.206.56.56 0 00-.206.763l1.76 3.047C3.12 6.776.5 10.963.5 15.632h23c0-4.669-2.62-8.856-6.894-10.65zM7.5 11.632a1 1 0 110-2 1 1 0 010 2zm9 0a1 1 0 110-2 1 1 0 010 2z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-24 bg-slate-900 border-t border-white/5">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-3xl font-black text-center text-white mb-12">Perguntas Frequentes</h2>
@@ -178,7 +216,7 @@
                             <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                         </span>
                     </summary>
-                    <p class="text-slate-400 mt-4 leading-relaxed">Não obrigatoriamente. Funciona direto no navegador. Mas recomendamos usar a opção "Adicionar à Tela Inicial" para uma experiência melhor.</p>
+                    <p class="text-slate-400 mt-4 leading-relaxed">Não obrigatoriamente. Funciona direto no navegador. Mas recomendamos baixar o APK para Android para uma experiência melhor.</p>
                 </details>
 
                 <details class="group bg-slate-800/50 p-6 rounded-2xl border border-white/5 cursor-pointer open:bg-slate-800 transition-all duration-300">
@@ -224,7 +262,7 @@
                 <a href="https://github.com/raphaelcborges" class="hover:text-rose-500 transition">GitHub</a>
             </div>
         </div>
-        <p class="mt-8 text-xs opacity-40">© 2025 VoyMatch. Feito com 💖 e código.</p>
+        <p class="mt-8 text-xs opacity-40">© 2025 VoyMatch. Desenvolvido com paixão e código.</p>
     </footer>
 
 </body>
